@@ -32,15 +32,66 @@
 \textblockorigin{3mm}{0.75\paperheight}
 \setlength{\parindent}{0pt}
 
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
 
-%header
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-\noindent{\LARGE{\underline{\textbf{SHIKHAR GUPTA}}}}\\
-\noindent{ +(91)-7897643738, 9451435446}
-\hfill
-\noindent \href{mailto:shikhargupta51@gmail.com}{shikhargupta51@gmail.com}\\
-\noindent \href{https://www.linkedin.com/in//Shikhar0051}{linkedin.com/in/Shikhar0051}
-\hfill \href{https://www.github.com/Shikhar0051}{github.com/Shikhar0051}\\
+
+
+%\noindent{\LARGE{\underline{\textbf{SHIKHAR GUPTA}}}}\\
+%\noindent{ +(91)-7897643738, 9451435446}
+%\hfill
+%\noindent \href{mailto:shikhargupta51@gmail.com}{shikhargupta51@gmail.com}\\
+%\noindent \href{https://www.linkedin.com/in//Shikhar0051}{linkedin.com/in/Shikhar0051}
+%\hfill \href{https://www.github.com/Shikhar0051}{github.com/Shikhar0051}\\
+
+\begin{center}
+    \textbf{\Huge \scshape Shikhar Gupta} \\ \vspace{1pt}
+    \small (+91)7897643738 $|$ \href{mailto:shikhargupta51@gmail.com}{\underline{shikhargupta51@gmail.com}} $|$ 
+    \href{https://shikhargupta.me/}{\underline{shikhargupta.me}} $|$
+    \href{https://linkedin.com/in/Shikhar0051.}{\underline{linkedin.com/in/shikhar0051}} $|$
+    \href{https://github.com/Shikhar0051}{\underline{github.com/shikhar0051}}
+\end{center}
 
 %Career Objective
 \section{Career Objective}
@@ -51,7 +102,7 @@
 \section{Education}
 \begin{tabular*}{\textwidth}{c @{\extracolsep{\fill}} lcr}	
 
-2022 & B.Tech.\textsc{(Computer Science and Engineering)} & \textbf{PDPM IIITDM Jabalpur} & GPA: 7.1/10\\
+2022 & B.Tech.\textsc{(Computer Science and Engineering)} & \textbf{PDPM IIITDM Jabalpur} & GPA: 7.3/10\\
 
 2018 & $12^{th}$ CBSE & \textsc{St. James School}, Hardoi & Percentage: 88.4\% \\
 
@@ -62,14 +113,23 @@
 %Work Experience
 \section{Work Experience}
 \begin{tabular}{r|p{15cm}}
+\textsc{Feb 2021 - Mar 2021} & \textbf{Python Developer at MyWays}\\
+&\textbullet Developed Lambda Handlers and their worker functions using pre written Rest APIs.\\
+&\textbullet Created tests cases for new and existing Lambdas and tested using AWS Console and Postman.\\
+&\textbullet Wrote Python Scripts to scrape and store data from multiple websites in DynamoDB and csv file.\\
+& Technologies used --AWS(AWS Lambda, DynamoDB, Cloudwatch, AWS Layers), Python, Selenium, BeautifulSoup, Postman\\
+
+
 \textsc{Jan 2021 - Feb 2021} & \textbf{Research and Development Intern at Gravitate AI}\\
 &\textbullet Analyzed Amplitude and spectrogram of different Audio files of Tensorflow speech recognition and mozilla common voice dataset\\
 &\textbullet Trained Model on Tensorflow speech recognition dataset using 3 layered CNN with .89 accuracy\\
-& Technologies used: Python, Tensorflow, Scipy, librosa\\
+& Technologies used -- Python, Tensorflow, Scipy, librosa\\
+
 \textsc{Oct 2020 - Nov 2020} & \textbf{AI Intern at Pantech Prolab India Pvt. Lmt.}\\
-\textsc{Dec 2019 - Mar 2020} & \textbf{Core Team Member Inter-IIIT Sports Meet - Gusto'20}\\
-&\textbullet Headed and managed the Media and Public Relations committee \\
-&\textbullet Handled the official communications between our Institute and other IIIT \\
+
+%\textsc{Dec 2019 - Mar 2020} & \textbf{Core Team Member Inter-IIIT Sports Meet - Gusto'20}\\
+%&\textbullet Headed and managed the Media and Public Relations committee \\
+%&\textbullet Handled the official communications between our Institute and other IIIT \\
 
 \end{tabular}
 
@@ -78,18 +138,22 @@
 \section{Academic and Personal Projects}
 
 \begin{tabular} {r|p{15cm}}
+\textsc{Jan 2021 - Present} & \href{https://github.com/Shikhar0051/Fusion}{ Department Module - Fusion IIIT - Intra-Web Application for IIITDM Jabalpur}\\
+&\textbullet Created new Module named Department and added its functionalities to existing application. \\
+&\textbullet Optimized Query Structure for effective queries from Django Database. \\
+&\textbullet Technologies used -- Python-Django, Javascript, HTML/CSS\\
+
+\textsc{Oct 2020 - Dec 2020} & \href{https://github.com/Shikhar0051/Flight-path-optimization-using-ACO}{Flight Path Optimization using Ant Colony Optimization}\\
+&\textbullet Optimized Flight Path Problem using Swarm Intelligence Technique of Ant Colony Optimization.\\
+&\textbullet Solved the existing problem using Traditional ACO, Elitist and  Min-Max Method. \\
+
 \textsc{July 2020 - Aug 2020} & \href{https://github.com/Shikhar0051/DANI-Desktop-assistant}{DANI Desktop assistant}\\
-&\textbullet A voice based Desktop assistant that works on Python v3.5 and above and uses other Python libraries\\
-&\textbullet Uses Microsoft SAPI5 voices and work only on windows. \\
+&\textbullet A voice based Desktop assistant that works on Python v3.5+ and uses other Python libraries\\
 &\textbullet Also automates the web browser (Google Chrome) and have functions like search on google and youtube and open newtabs\\
 
 \textsc{Feb 2020 - June 2020} & \href{https://github.com/Shikhar0051/Real-time-price-compare}{Price Trend Analyzer for Online Shopping}\\
 &\textbullet An online site that compares the price of different products on shopping websites\\
 &\textbullet Python based project using Flask and other Python libraries like BeautifulSoup and Selenium\\
-
-\textsc{Jan 2020 - April 2020} & \textbf{Gesture based Laptop Controller}\\
-&\textbullet IOT Based project using Arduino and ultrasound sensors for gesture control\\
-&\textbullet Recent work includes few gestures like Scrolling page\\
 
 \textsc{sept 2019 - dec 2019} &  \href{https://github.com/gshubha/PLACEMENT-CELL-MANAGEMENT}{Placement Cell Management website}\\
 & \textbullet Focuses on providing simple but effective layout for users\\
@@ -101,10 +165,10 @@
 \section{Skills}
 \begin{tabular}{r|p{15cm}}
 
-\textsc{Programming}&Python, Java, JavaScript\\
-\textsc{Database}&MongoDB, MySQL\\
-\textsc{Web Framework}& Django/Flask\\
-\textsc{Tools And Techs}&  WordPress, Git, Omnet++\\
+\textsc{Programming}&Python, JavaScript, Java(Familiar), PHP(Familiar)\\
+\textsc{Database}& MySQL, DynamoDB, MongoDB(Familiar)\\
+\textsc{Web Framework}& Django, Flask\\
+\textsc{Developer Tools}&  WordPress, Git, Google Cloud Platform, AWS Serverless, Postman\\
 \end{tabular}
 
 
@@ -117,7 +181,7 @@
 \textsc{Nov 2019(13 hrs)} & {Introduction to Cyber Attackes (Online Self-learn basis from Coursera)}\\
 \textsc{Sept 2019(32 hrs)} & {CompTIA Network+ (Online Self-learn basis from Cybrary)}\\
 \textsc{June 2019(4 weeks)} & {Core Java Certification via Aptron, Gurugram}\\
-\textsc{March 2019} & {Build a Basic Chatbot in Hackathon organised by IBM}
+%\textsc{March 2019} & {Build a Basic Chatbot in Hackathon organised by IBM}
 \end{tabular}
 
 
@@ -125,17 +189,18 @@
 \section{Position of Responsibility}
 \begin{tabular} {r|p{15cm}}
 
+\textsc{Dec 2019 - Mar 2020} & {Core Team Member Inter IIIT Sports Meet - Gusto'20}\\
 \textsc{Oct 2019} & {Football Team Captain for Institute Team}\\
 \textsc{Apr 2017 - Mar 2018} & {Counsel Member(House Captain) for School Student Representative team}\\
 
 \end{tabular}
 
 %Hobbies
-\section{Hobbies}
-\begin{tabular} {r|p{15cm}}
-\textsc{Hobbies} & \textbullet Playing Football (Goalkeeper for Institute Football team)  \\
-& \textbullet  Swimming (District level swimmer)\\
-\end{tabular}
+%\section{Hobbies}
+%\begin{tabular} {r|p{15cm}}
+%\textsc{Hobbies} & \textbullet Playing Football (Goalkeeper for Institute Football team)  \\
+%& \textbullet  Swimming (District level swimmer)\\
+%\end{tabular}
 
 
 \end{document}
